@@ -97,13 +97,6 @@
         <img src="{{ asset('assets/images/ft1.svg') }}" alt="Telship" class="logo">
 
         <!-- Text -->
-        <h2 class="title ">Dapatkan Notifikasi Lowongan</h2>
-
-        <!-- Input Email -->
-        <div class="subscribe">
-            <input type="email" placeholder="Masukan Email" class="email-input">
-            <button class="send-button">Kirim</button>
-        </div>
 
         <!-- Copyright -->
         <p class="copyright">&copy; 2025 Telship. Seluruh Hak Cipta Dilindungi.</p>

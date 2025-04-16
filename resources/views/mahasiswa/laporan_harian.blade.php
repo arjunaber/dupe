@@ -10,7 +10,10 @@
         {{-- Konten Utama --}}
         <div class="flex-grow-1 p-4" style="margin-top: 60px;">
             <div class="d-flex gap-2">
-                <button class="btn btn-outline-danger fw-semibold" style="pointer-events: none;">UPLOAD LAPORAN</button>
+                <button class="btn fw-semibold" style="color: #dc3545; border: 2px solid #dc3545; pointer-events: none;">
+                    UPLOAD LAPORAN
+                </button>
+
                 <button class="btn btn-outline-secondary text-muted" disabled>STATUS LAPORAN</button>
                 <button class="btn btn-outline-secondary text-muted" disabled>MINTA IZIN</button>
             </div>
@@ -22,7 +25,7 @@
                     <h5 class="fw-bold mb-3">Laporan Harian</h5>
                     <p class="text-muted">Tulis Apa Saja Yang Kamu Sudah Kerjakan Hari Ini</p>
 
-                    <form action="" method="POST">
+                    <form action="{{ route('laporan.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="tanggal" class="form-label fw-semibold">Tanggal</label>
@@ -34,7 +37,13 @@
                             <textarea name="deskripsi" id="deskripsi" rows="5" class="form-control"
                                 placeholder="Tuliskan kegiatanmu hari ini..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-danger w-100 rounded-pill mt-3">Kirim Laporan</button>
+                        <button type="submit" class="btn btn-danger w-100 rounded-pill mt-3"
+                            style="background-color: #d60000; border-color: #b50000;">Kirim Laporan</button>
+                        @if (session('success'))
+                            <div class="alert alert-success mt-3">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                     </form>
                 </div>
             </div>
