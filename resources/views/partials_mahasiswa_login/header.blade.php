@@ -306,89 +306,41 @@
                             <i class="ti ti-x ti-sm align-middle"></i>
                         </a>
                     </div>
+                    <ul class="navbar-nav flex-row align-items-center ms-auto">
+                        <!-- Notification -->
+                        <li class="nav-item me-3 me-xl-1">
+                            <a class="nav-link" href="javascript:void(0);">
+                                <i class="ti ti-bell ti-md"></i>
+                            </a>
+                        </li>
 
-                    <aside id="layout-menu"
-                        class="layout-menu-horizontal menu-horizontal menu bg-menu-theme flex-grow-0"
-                        style="box-shadow: none;">
-                        <div class="container-xxl d-flex h-100" style="width: 62rem; justify-content: flex-end;">
-                            <ul class="menu-inner">
+                        <!-- Divider -->
+                        <li class="nav-item me-3 me-xl-1 d-none d-lg-block">
+                            <span class="vr" style="height: 24px;"></span>
+                        </li>
 
-                                <!-- Lowongan Magang -->
-                                <li class="menu-item">
-                                    <a href="/apply-lowongan" class="menu-link">
-                                        <div data-i18n="Beranda" style="padding-left: 350px;">Beranda</div>
-                                    </a>
+                        <!-- User -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle hide-arrow d-flex align-items-center" href="#"
+                                data-bs-toggle="dropdown">
+                                <div class="avatar avatar-online me-2">
+                                    <img src="{{ asset('app-assets/img/avatars/1.png') }}" alt="User Avatar"
+                                        class="rounded-circle" width="32" height="32" />
+                                </div>
+                                <span class="fw-medium text-dark">Alexa</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#"><i class="ti ti-user me-2"></i>
+                                        Profil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="ti ti-settings me-2"></i>
+                                        Pengaturan</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
                                 </li>
-
-                                <!-- Perusahaan -->
-                                <li class="menu-item">
-                                    <a href="/daftar_perusahaan" class="menu-link">
-                                        <div data-i18n="Magang" style="">Magang</div>
-                                    </a>
-                                </li>
+                                <li><a class="dropdown-item" href=""><i
+                                            class="ti ti-logout me-2"></i> Logout</a></li>
                             </ul>
-                        </div>
-                    </aside>
+                        </li>
+                    </ul>
 
-                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                            <i class="ti ti-menu-2 ti-sm"></i>
-                        </a>
-                    </div>
-
-                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-                        <!-- Login dan Daftar -->
-
-                        @php
-                            $user = Auth::user();
-                        @endphp
-                        @if (!$user)
-                            <ul class="navbar-nav flex-row align-items-center ms-auto">
-                                <a href="{{ url('/register') }}">
-                                    <button class="btn btn-danger me-2" type="button"
-                                        style="background-color: #d60000; border-color: #b50000;">
-                                        Register
-                                    </button>
-                                </a>
-                                <a href="{{ url('/login') }}">
-                                    <button class="btn btn-light me-2" type="button" style="border-color: #ffffff;">
-                                        Login
-                                    </button>
-                                </a>
-                            </ul>
-                        @else
-                    </div>
-                    @endif
-                </div>
             </nav>
-
-            <!-- / Navbar -->
-
-            <!-- Layout container -->
-            <div class="layout-page">
-                <!-- Content wrapper -->
-                <div class="content-wrapper">
-
-                    <!-- Content -->
-
-                    <!-- <div class="container-xxl flex-grow-1 container-p-y"> -->
-
-                    <!-- Modal Delete-->
-                    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
-                        aria-labelledby="deleteModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                </div>
-                                <div class="modal-body text-center" style="display:block;">
-                                    Apakah Anda Ingin Keluar Dari Akun Ini?
-                                </div>
-                                <div class="modal-footer" style="display: flex; justify-content:center;">
-                                    <a href=""><button type="button" class="btn btn-success"
-                                            data-dismiss="modal">Iya</button></a>
-                                    <button type="button" class="btn btn-danger"
-                                        data-bs-dismiss="modal">Tidak</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
