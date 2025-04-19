@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 
-Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
+Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
 Route::post('/laporan', [LaporanController::class, 'store'])->name('laporan.store');
 
 Route::get('/register', [RegisterController::class, 'show'])->name('register');
