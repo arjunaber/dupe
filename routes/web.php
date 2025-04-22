@@ -16,8 +16,7 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 
-Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
-Route::post('/laporan', [LaporanController::class, 'store'])->name('laporan.store');
+
 
 Route::get('/register', [RegisterController::class, 'show'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
@@ -28,9 +27,14 @@ Route::post('/registermentor', [RegisterMentorController::class, 'store'])->name
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 
-Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
 
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
 Route::get('/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::put('/mahasiswa/{id}/update', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
-
 Route::get('/mahasiswa/{id}/destroy', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
+
+Route::get('/mahasiswa/laporan', [LaporanController::class, 'index_laporan'])->name('laporan.index');
+Route::get('/mahasiswa/izin', [LaporanController::class, 'index_izin'])->name('izin.index');
+Route::post('/laporan', [LaporanController::class, 'store_laporan'])->name('laporan.store');
+Route::post('/izin', [LaporanController::class, 'store_izin'])->name('izin.store');
