@@ -14,11 +14,25 @@ class LaporanController extends Controller
         return view('mahasiswa.laporan_harian',[
         'activePage' => 'laporan']);
     }
+
     public function index_izin()
     {
         return view('mahasiswa.izin',[
         'activePage' => 'laporan']);
     }
+    
+    public function index_status()
+    {
+        $laporans = Laporan::where('id_mahasiswa', 1) // ganti 1 nanti jadi Auth::user()->mahasiswa->id_mahasiswa
+            ->orderByDesc('tanggal')
+            ->get();
+
+        return view('mahasiswa.status', [
+            'activePage' => 'laporan',
+            'laporans' => $laporans
+        ]);
+    }
+    
 
     public function store_laporan(Request $request)
     {
@@ -57,4 +71,5 @@ class LaporanController extends Controller
 
     return redirect()->back()->with('success', 'Izin berhasil dikirim!');
     }
+
 }

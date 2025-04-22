@@ -36,5 +36,6 @@ Route::get('/mahasiswa/{id}/destroy', [MahasiswaController::class, 'destroy'])->
 
 Route::get('/mahasiswa/laporan', [LaporanController::class, 'index_laporan'])->name('laporan.index');
 Route::get('/mahasiswa/izin', [LaporanController::class, 'index_izin'])->name('izin.index');
+Route::get('/mahasiswa/status', [LaporanController::class, 'index_status'])->name('status.index');
 Route::post('/laporan', [LaporanController::class, 'store_laporan'])->name('laporan.store');
 Route::post('/izin', [LaporanController::class, 'store_izin'])->name('izin.store');
