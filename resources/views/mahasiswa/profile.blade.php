@@ -30,12 +30,13 @@
                                 <div class="me-3">
                                     @if ($mahasiswa->foto_profile)
                                         <img src="{{ Storage::url('fotos/' . $mahasiswa->foto_profile) }}" alt="Foto Profil"
-                                            style="width: 50px; height: 50px;" class="rounded"
+                                            style="width: 50px; height: 50px; object-fit: cover;" class="rounded-circle"
                                             onerror="this.src='{{ asset('app-assets/img/avatars/1.png') }}'">
                                     @else
                                         <img src="{{ asset('images/default-profile.png') }}" alt="Foto Default"
-                                            style="width: 50px; height: 50px;" class="rounded">
+                                            style="width: 50px; height: 50px; object-fit: cover;" class="rounded-circle">
                                     @endif
+
                                 </div>
                                 <input type="file" name="foto_profile" class="form-control"
                                     accept="image/jpeg,image/png,image/jpg">

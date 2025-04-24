@@ -98,12 +98,12 @@ class MahasiswaController extends Controller
             $filename = hash('sha256', time().Str::random(40)).'.'.$extension;
             
             // Hapus file lama jika ada
-            if ($mahasiswa->foto_profile && Storage::exists('public/fotos/'.$mahasiswa->foto_profile)) {
-                Storage::delete('public/fotos/'.$mahasiswa->foto_profile);
+            if ($mahasiswa->foto_profile && Storage::disk('public')->exists('fotos/'.$mahasiswa->foto_profile)) {
+                Storage::disk('public')->delete('fotos/'.$mahasiswa->foto_profile);
             }
             
             // Simpan file dengan stream content untuk menghindari masalah permission
-            Storage::put('public/fotos/'.$filename, file_get_contents($file->getRealPath()));
+            Storage::disk('public')->put('fotos/'.$filename, file_get_contents($file->getRealPath()));
             
             // Update database
             $mahasiswa->foto_profile = $filename;
