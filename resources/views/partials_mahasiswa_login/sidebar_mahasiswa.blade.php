@@ -10,17 +10,17 @@
 
     <ul class="nav flex-column" style="list-style: none; padding-left: 0;">
         <li class="nav-item mb-2">
-            @if ($activePage == 'profile')
-                <a href="/profile" class="nav-link text-decoration-none"
-                    style="display: block; padding: 10px 12px; border-radius: 6px; background-color: #ffffff; border: 1px solid #dee2e6;">
-                    <span style="color: #6c757d; font-weight: 600;">
+            @if (Request::is('mahasiswa/profile'))
+                <a href="/mahasiswa/profile" class="nav-link text-decoration-none"
+                    style="display: block; padding: 10px 12px; border-radius: 6px; background-color: #ffffff; border: 1px solid #e74c3c;">
+                    <span style="color: #e74c3c; font-weight: 600;">
                         <img src="{{ asset('assets/icons/profile-icon.svg') }}" alt="Profile" width="18"
                             style="margin-right: 8px;">
                         PROFILE
                     </span>
                 </a>
             @else
-                <a href="/profile" class="nav-link text-decoration-none"
+                <a href="/mahasiswa/profile" class="nav-link text-decoration-none"
                     style="display: block; padding: 10px 12px; border-radius: 6px; background-color: #f0f0f0; border: none;">
                     <span style="color: #a0a0a0; font-weight: 400;">
                         <img src="{{ asset('assets/icons/profile-icon-no.svg') }}" alt="Profile" width="18"
@@ -55,7 +55,7 @@
 
         <li class="nav-item mb-2">
             @if ($activePage == 'status')
-                <a href="/mahasiswa/laporan" class="nav-link text-decoration-none"
+                <a href="/mahasiswa/status" class="nav-link text-decoration-none"
                     style="display: block; padding: 10px 12px; border-radius: 6px; background-color: #ffffff; border: 1px solid #e74c3c;">
                     <span style="color: #e74c3c; font-weight: 600;">
                         <img src="{{ asset('assets/icons/status-icon.svg') }}" alt="Status" width="18"
@@ -64,7 +64,7 @@
                     </span>
                 </a>
             @else
-                <a href="/status" class="nav-link text-decoration-none"
+                <a href="/mahasiswa/status" class="nav-link text-decoration-none"
                     style="display: block; padding: 10px 12px; border-radius: 6px; background-color: #f0f0f0; border: none;">
                     <span style="color: #a0a0a0; font-weight: 400;">
                         <img src="{{ asset('assets/icons/status-icon-no.svg') }}" alt="Status" width="18"
@@ -88,7 +88,7 @@
                 </a>
             @else
                 <!-- Versi dengan latar belakang abu-abu untuk menu tidak aktif -->
-                <a href="/laporan" class="nav-link text-decoration-none"
+                <a href="/mahasiswa/laporan" class="nav-link text-decoration-none"
                     style="display: block; padding: 10px 12px; border-radius: 6px; background-color: #f0f0f0; border: none;">
                     <span style="color: #a0a0a0; font-weight: 400;">
                         <img src="{{ asset('assets/icons/report-icon-no.svg') }}" alt="Laporan" width="18"

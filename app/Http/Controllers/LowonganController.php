@@ -34,6 +34,7 @@ class LowonganController extends Controller
             'activePage' => 'laporan',
             'lowongans' => $lowongans,
             'id_mahasiswa' => $id_mahasiswa,
+            'mahasiswa' => $mahasiswa,
         ]);
     }
 
@@ -54,6 +55,7 @@ class LowonganController extends Controller
             'activePage' => 'laporan',
             'lowongans' => $lowongans,
             'id_mahasiswa' => $id_mahasiswa,
+            'mahasiswa' => $mahasiswa,
         ]);
     }
 }
