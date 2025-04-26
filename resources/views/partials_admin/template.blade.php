@@ -1,3 +1,3 @@
-@include('partials_mahasiswa_login.header')
+@include('partials_admin.header')
 @yield('main')
-@include('partials_mahasiswa_login.footer')
+@include('partials_admin.footer')

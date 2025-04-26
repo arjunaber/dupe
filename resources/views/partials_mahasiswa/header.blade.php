@@ -315,14 +315,14 @@
 
                                 <!-- Lowongan Magang -->
                                 <li class="menu-item">
-                                    <a href="/apply-lowongan" class="menu-link">
+                                    <a href="/mahasiswa/lowongan" class="menu-link">
                                         <div data-i18n="Beranda" style="padding-left: 350px;">Beranda</div>
                                     </a>
                                 </li>
 
                                 <!-- Perusahaan -->
                                 <li class="menu-item">
-                                    <a href="/daftar_perusahaan" class="menu-link">
+                                    <a href="/mahasiswa/lowongan" class="menu-link">
                                         <div data-i18n="Magang" style="">Magang</div>
                                     </a>
                                 </li>

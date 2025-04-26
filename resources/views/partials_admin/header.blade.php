@@ -336,7 +336,7 @@
                             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class="avatar me-3 mt-n1">
-                                    @if ($mahasiswa->foto_profile)
+                                    {{-- @if ($mahasiswa->foto_profile)
                                         <img src="{{ Storage::url('fotos/' . $mahasiswa->foto_profile) }}"
                                             alt="Foto Profil" style="width: 50px; height: 50px; object-fit: cover;"
                                             class="rounded-circle"
@@ -345,7 +345,7 @@
                                         <img src="{{ asset('images/default-profile.png') }}" alt="Foto Default"
                                             style="width: 50px; height: 50px; object-fit: cover;"
                                             class="rounded-circle">
-                                    @endif
+                                    @endif --}}
                                 </div>
                                 <span class="fw-medium text-dark">{{ Auth::user()->name }}</span>
                             </a>

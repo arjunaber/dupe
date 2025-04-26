@@ -23,7 +23,7 @@ class LowonganController extends Controller
         $mahasiswa = Mahasiswa::where('user_id', $user->id)->first();
 
         if (!$mahasiswa) {
-            return redirect()->route('home')->with('error', 'Hanya mahasiswa yang bisa mengakses halaman ini.');
+            return redirect()->route('/login')->with('error', 'Hanya mahasiswa yang bisa mengakses halaman ini.');
         }
 
         $id_mahasiswa = $mahasiswa->id_mahasiswa;
@@ -45,7 +45,7 @@ class LowonganController extends Controller
         $mahasiswa = Mahasiswa::where('user_id', $user->id)->first();
 
         if (!$mahasiswa) {
-            return redirect()->route('home')->with('error', 'Hanya mahasiswa yang bisa mengakses halaman ini.');
+            return redirect()->route('/login')->with('error', 'Hanya mahasiswa yang bisa mengakses halaman ini.');
         }
 
         $id_mahasiswa = $mahasiswa->id_mahasiswa;

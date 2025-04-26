@@ -19,7 +19,7 @@ class Mahasiswa extends Model
         'password',
         'jurusan',
         'no_hp',
-        'user_id', // jangan lupa tambahkan ini!
+        'user_id',
     ];
 
     public function user()
