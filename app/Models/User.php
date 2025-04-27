@@ -15,6 +15,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'id_perusahaan',
     ];
 
     public function mahasiswa()
@@ -25,5 +27,10 @@ class User extends Authenticatable
     public function admin()
     {
         return $this->hasOne(Admin::class);
+    }
+
+    public function mentor()
+    {
+        return $this->hasOne(UserMentor::class);
     }
 }

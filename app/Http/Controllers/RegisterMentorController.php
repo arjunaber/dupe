@@ -27,8 +27,7 @@ class RegisterMentorController extends Controller
             'id_perusahaan' => $request->id_perusahaan,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            // tambahkan role jika kamu ingin bedakan user dan mentor
-            // 'role' => 'mentor',
+            'role' => 'mentor',
         ]);
 
         return redirect('/login')->with('success', 'Berhasil daftar mentor! Silakan login.');
